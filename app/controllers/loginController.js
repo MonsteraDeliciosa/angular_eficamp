@@ -29,6 +29,9 @@
           $scope.loginError = false;
           $scope.errorMessage;
 
+          $scope.knownUser = true;
+          $scope.knownUserClass = 'known user-img';
+
           $window.location.href = '#/transfers';
 
         }).catch(function onError(response) {

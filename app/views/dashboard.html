@@ -78,21 +78,20 @@
         <div class="row">
           <div class="small-12 medium-8 columns">
             <h1>Finance life stream</h1>
-            <div class="row">
-              <div class="small-4 columns">
-                <h2 class="lead">Balance</h2>
-                <span class="js-getDataStream balance"></span>
-                <span class="currency"> PLN</span>
-              </div>
-              <div class="small-4 columns">
-                <h2 class="lead">Finance stream</h2>
-                <span class="js-getDataStream financeStream"></span>
-                <span class="currency"> PLN</span>
-              </div>
-              <div class="small-4 columns">
-                <h2 class="lead">Scheduled payments</h2>
-                <span class="js-getDataStream scheduledPayments"><span>
-                <span class="currency"> PLN</span>
+            <div ng-controller="DashboardController">
+              <div class="row">
+                <div class="small-4 columns">
+                  <h2 class="lead">Balance</h2>
+                  <span class="js-getDataStream balance">{{ balance | currency : '' : 2 }} PLN</span>
+                </div>
+                <div class="small-4 columns">
+                  <h2 class="lead">Finance stream</h2>
+                  <span class="js-getDataStream financeStream">{{ funds | currency : '' : 2 }} PLN</span>
+                </div>
+                <div class="small-4 columns">
+                  <h2 class="lead">Scheduled payments</h2>
+                  <span class="js-getDataStream scheduledPayments">{{ payments | currency : '' : 2 }} PLN<span>
+                </div>
               </div>
             </div>
           </div>
@@ -156,13 +155,22 @@
                 </div>
                 <div class="small-6 columns">
                   <span class="js-getData description">{{ transfer.description }}</span>
-                  <button class="button small no-margin float-right" ng-click="showDetails(transfer.id)">View Details</button>
-                  <!-- <span class="js-getData category">{{ transfer.category }}</span> -->
+                  <button class="button small no-margin float-right" ng-click="toggleDetails($event, transfer.id)">Details</button>
                 </div>
                 <div class="small-3 columns">
                   <span class="js-getData status">{{ transfer.status }}</span>
-                  <span class="js-getData amount">{{ transfer.amount }}</span>
+                  <span class="js-getData amount">{{ transfer.amount | currency : '' : 2 }}</span>
                   <span class="js-getData hcurrency">{{ transfer.currency }}</span>
+                </div>
+              </div>
+              <div class="details-container" ng-show="transfer.id === activeId">
+                <div class="row align-middle">
+                  <div class="columns small-3 text-left">
+                    <span class="js-getData category">ID: {{ transfer.id }} </span>
+                  </div>
+                  <div class="columns small-9 text-left">
+                    <span class="js-getData category">category: {{ transfer.category }} </span>
+                  </div>
                 </div>
               </div>
             </li>

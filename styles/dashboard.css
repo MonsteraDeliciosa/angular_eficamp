@@ -20,6 +20,10 @@
   text-align: right
 }
 
+.list-component ul li .details-container .columns:last-of-type {
+  text-align: left;
+}
+
 .list-component ul li span.income {
   font-weight: bold;
   color: #3e9f3e
@@ -73,6 +77,7 @@
   height: 70px
 }
 
+
 /*.buttons-container {
   width: 100px;
   background: #fff;
@@ -98,6 +103,7 @@
   padding: 3em 0;
   background: #d9dada
 }
+
 
 /*footer .menu {
   margin-left: 5px
@@ -262,7 +268,10 @@ nav.navigation-wrapper .menu-box img {
   height: auto
 }
 
+.data-list li:not(:first-of-type) {
+  border-top: 1px solid #2ba6cb;
+}
 
-/*.data-list {
-  font-size: 12px;
-}*/
+.data-list li:not(:last-of-type) {
+  border-bottom: 1px solid #2ba6cb;
+}
