@@ -1,0 +1,15 @@
+.base-margin-top {
+  margin-top: 50px;
+}
+
+.base-margin-bottom {
+  margin-bottom: 50px;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.float-right {
+  float: right;
+}

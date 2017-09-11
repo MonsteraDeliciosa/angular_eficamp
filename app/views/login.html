@@ -1,0 +1,66 @@
+<div class="login-wrapper base-margin-top">
+  <div class="row align-middle">
+    <div class="columns">
+      <div class="row align-center">
+        <div class="small-12 medium-3 large-3 columns">
+          <div class="logo-container">
+            <img src="img/efi_logo.png" alt="efi3 logo" />
+          </div>
+        </div>
+        <div class="small-12 medium-9 end columns">
+          <div class="apla text-center">
+            <div class="header-container">
+              <h1>Login</h1>
+              <p class="lead">
+                Log in to see your account data and browse your history.
+              </p>
+            </div>
+            <div class="user-container">
+              <form id="login" ng-controller="LoginController">
+
+                <div>
+                  <div ng-class="knownUserClass">
+                    <img class="user-avatar" src="img/user-icon.png" ng-hide="knownUser" />
+                  </div>
+                  <div class="user-number" ng-show="knownUser">
+                    <p class="no-margin">Welcome back,</p>
+                    <h2 class="user-id">efi <a href="" ng-click="changeUser()">
+                      <div class="user-close">
+                        <img src="img/close.png" />
+                      </div>
+                    </a></h2>
+
+                  </div>
+                </div>
+                <div class="unknown-user" ng-hide="knownUser">
+                  <div class="input-container">
+                    <div class="login-container">
+                      <input id="name" type="text" placeholder="Login" />
+                      <div class="error-label" ng-show="loginError">
+                        <p> {{ errorMessage }}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="input-container">
+                  <div class="password-container">
+                    <input id="password" type="password" placeholder="Password" />
+                    <div class="error-label" ng-show="loginError">
+                      <p> {{ errorMessage }}</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="buttons-container base-margin-top">
+                  <input ng-click="changeUser()" type="button" class="btn back-btn" value="select other" />
+                  <input ng-click="postLogin()" type="submit" class="btn cta-btn" value="go" />
+                </div>
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

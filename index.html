@@ -1,0 +1,59 @@
+<!doctype html>
+<html ng-app="bankApp">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Efi3 Bank</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" rel="stylesheet">
+  <link href="styles/foundation.css" rel="stylesheet" type="text/css" />
+  <link href="styles/style.css" rel="stylesheet" type="text/css" />
+  <link href="styles/margins.css" rel="stylesheet" type="text/css" />
+  <link href="styles/dashboard.css" rel="stylesheet" type="text/css" />
+
+
+  <link href="styles/animations.css" rel="stylesheet" type="text/css" />
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+</head>
+
+<body class="flex-wrapper">
+  <main ng-view>
+
+  </main>
+
+  <!-- TODO - footer into directive -->
+  <footer class="flex-footer">
+    <ul class="menu menu-left">
+      <li>
+        <a href="#">security</a>
+      </li>
+      <li>
+        <a href="#">logging in</a>
+      </li>
+      <li>
+        <a href="#">contact</a>
+      </li>
+    </ul>
+    <ul class="menu menu-right">
+      <li>
+        <a href="#">facebook</a>
+      </li>
+      <li>
+        <a href="#">twitter</a>
+      </li>
+    </ul>
+
+  </footer>
+  <script src="scripts/angular.js"></script>
+  <script src="scripts/angular-route.js"></script>
+  <!-- <script src="scripts/angular-animate.js"></script> -->
+  <script src="app/app.js"></script>
+  <script src="app/controllers/dashboardController.js"></script>
+  <script src="app/controllers/loginController.js"></script>
+  <script src="app/controllers/transfersController.js"></script>
+  <script src="app/services/transfersFactory.js"></script>
+  <script src="app/services/values.js"></script>
+</body>
+
+</html>
