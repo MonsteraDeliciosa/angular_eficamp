@@ -1,21 +1,22 @@
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;
 }
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;  
+}
+
 
 /* Body */
 
-.flex-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+.body-wrapper {
+  position: relative;
   min-height: 100vh;
-  width: 100%;
   background: url("../img/bg.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed
+  background-attachment: fixed;
+  font-family: 'Roboto', sans-serif !important;
 }
 
 
@@ -24,6 +25,10 @@
 .flex-footer {
   background: white;
   width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -73,10 +78,10 @@
 }
 
 .user-container .user-img.known {
-background-image: url('../img/user-nav.jpg');
-background-position: center;
-background-size: 100%;
-background-repeat: no-repeat;
+  background-image: url('../img/user-nav.jpg');
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 .user-container .user-img img {
@@ -98,6 +103,7 @@ background-repeat: no-repeat;
 .user-container .user-number {
   margin: 10px
 }
+
 
 /*.user-container .user-close {
   height: 30px;
@@ -121,6 +127,7 @@ background-repeat: no-repeat;
   border-radius: 7px;
   margin-top: 1.25rem
 }
+
 button {
   cursor: pointer;
 }
@@ -137,11 +144,10 @@ button {
 .input-container input {
   width: 100%;
   max-width: 400px;
-  margin:10px 0 0 0;
+  margin: 10px 0 0 0;
 }
 
-.input-container .password-container,
-.input-container .login-container {
+.input-container .password-container, .input-container .login-container {
   /*display: inline;*/
   position: relative;
   width: 100%;
@@ -150,10 +156,6 @@ button {
 }
 
 .input-container .error-label {
-  /*display: none;*/
-  /*position: absolute;*/
-  /*top: 29px;*/
-  /*left: 0;*/
   width: 100%;
   max-width: 400px;
   margin-left: auto;
@@ -206,4 +208,16 @@ input.success {
   min-width: 120px;
   background: #13bdd2;
   color: #fff
+}
+
+.text-white {
+  color: #fff;
+}
+
+.text-normal {
+  font-family: 'Roboto', sans-serif;
+}
+
+.text-condensed {
+  font-family: 'Roboto Condensed', sans-serif;
 }

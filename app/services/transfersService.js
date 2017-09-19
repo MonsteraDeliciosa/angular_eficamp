@@ -3,7 +3,7 @@
         var transfers = $http.get('https://efigence-camp.herokuapp.com/api/data/history');
 
         this.getTransfers = function() {
-            return transfers;
+            return transfers.reverse();
         };
 
         this.getTransfer = function(customerId) {
