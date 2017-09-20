@@ -20,7 +20,7 @@
       });
 
       dashboardFactory.getTransfers().then(function(response) {
-        $scope.transfers = response.data.content;
+        $scope.transfers = response.data.content.reverse();
       }, function(data, status, headers, config) {
         $log.log(data.error + ' ' + status);
       });
@@ -28,7 +28,7 @@
       dashboardFactory.getProducts().then(function(response) {
 
         //TODO refactor
-        
+
         $scope.products.wallets = response.data.content.filter(record => record.type === "Wallet")[0];
         $scope.products.wallets.img = 'img/wallets.png';
         $scope.products.deposits = response.data.content.filter(record => record.type === "Deposits")[0];

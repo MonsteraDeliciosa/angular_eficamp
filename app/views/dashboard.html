@@ -12,7 +12,7 @@
         </div>
         <div class="columns shrink">
           <div class="row align-middle columns">
-            <h3 class="lead text-white">Jan Kowalski</h3>
+            <h3 class="lead text-white text-condensed">Jan Kowalski</h3>
           </div>
           <ul class="row no-bullets-list no-margin">
             <li class="columns shrink">
@@ -75,19 +75,19 @@
   <section class="section">
     <div class="row">
       <div class="columns">
-        <h1>Finance life stream</h1>
+        <h1 class="text-condensed">Finance life stream</h1>
         <div>
           <div class="row">
             <div class="small-4 columns">
-              <h2 class="lead">Balance</h2>
+              <h2 class="lead text-condensed">Balance</h2>
               <span class="text-condensed"><b>{{ balance | currency : '' : 2 }}</b> PLN</span>
             </div>
             <div class="small-4 columns">
-              <h2 class="lead">Finance stream</h2>
+              <h2 class="lead text-condensed">Finance stream</h2>
               <span class="text-condensed"><b>{{ funds | currency : '' : 2 }}</b> PLN</span>
             </div>
             <div class="small-4 columns">
-              <h2 class="lead">Scheduled payments</h2>
+              <h2 class="lead text-condensed">Scheduled payments</h2>
               <span class="text-condensed"><b>{{ payments | currency : '' : 2 }}</b> PLN<span>
                 </div>
               </div>
@@ -103,14 +103,16 @@
             </div>
           </div>
         </div>
-        <div class="row">
+        <div class="row align-middle">
           <div class="columns">
             <div class="buttons-wrapper inline">
-              <span>Account analysis</span>
-              <div class="buttons-container">
-                <button class="cta">on</button>
-                <button class="cta active">off</button>
-              </div>
+              <h3 class="h5">Account analysis</h3>
+            </div>
+          </div>
+          <div class="columns shrink">
+            <div class="buttons-container">
+              <button class="cta">on</button>
+              <button class="cta active">off</button>
             </div>
           </div>
         </div>
@@ -119,7 +121,7 @@
 
   </section>
 
-  <section class="finance-stream">
+  <section class="finance-stream section">
     <div class="row">
       <div class="columns">
         <div class="stream-wrapper">
@@ -129,7 +131,7 @@
     </div>
   </section>
 
-  <section class="products-history">
+  <section class="products-history section">
     <div class="row">
       <div class="columns">
         <h2 class="lead">Products</h2>

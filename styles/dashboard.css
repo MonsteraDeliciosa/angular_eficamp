@@ -63,27 +63,38 @@
   margin: 0 5px;
   text-transform: uppercase;
   border-radius: 5px;
-  color: #fff
+  color: #fff;
+  transition: all 0.3s;
 }
 
 .dashboard-wrapper button.cta:hover, .dashboard-wrapper button.cta.active:hover {
   background: #000;
 }
 
-.buttons-wrapper {
-  height: 70px
+.button {
+  transition: all 0.3s;
 }
 
+.button:hover {
+  background: #000;
+  transition: all 0.3s;
+}
 
-/*.buttons-container {
+.buttons-wrapper {
+  padding: 5px 0;
+}
+
+.buttons-container {
+  display: inline;
+  height: 50px;
   width: 100px;
   background: #fff;
-  padding: 5px;
+  padding: 10px 15px;
   margin: 20px 5px;
   border-radius: 5px
 }
 
-.buttons-container button.cta {
+/* .buttons-container button.cta {
   background: #fff;
   padding: 5px;
   margin: 0 5px;
@@ -97,7 +108,7 @@
 }
 
 .products-history {
-  padding: 2em 0;
+  /*padding: 2em 0;*/
   background: #d9dada
 }
 
@@ -106,7 +117,7 @@
 }
 
 .section {
-  padding: 2em 0
+  padding: 1.5em 0
 }
 
 nav.navigation-wrapper {
@@ -172,24 +183,12 @@ nav.navigation-wrapper .pages-navigation .nav-box {
   list-style-type: none;
   height: 130px;
   padding-bottom: 20px;
+  transition: all 0.3s;
 }
 
 nav.navigation-wrapper .pages-navigation .nav-box:hover {
   position: relative;
   background: #000
-}
-
-nav.navigation-wrapper .pages-navigation .nav-box:hover:after {
-  content: '';
-  position: absolute;
-  background: #000;
-  bottom: -5px;
-  right: 50%;
-  width: 15px;
-  height: 15px;
-  border-radius: 8px;
-  -ms-transform: translateX(50%);
-  transform: translateX(50%)
 }
 
 nav.navigation-wrapper .pages-navigation .nav-box.active {
@@ -207,7 +206,8 @@ nav.navigation-wrapper .pages-navigation .nav-box.active:after {
   height: 15px;
   border-radius: 8px;
   -ms-transform: translateX(50%);
-  transform: translateX(50%)
+  transform: translateX(50%);
+  transition: all 0.3s;
 }
 
 nav.navigation-wrapper .pages-navigation .nav-box .nav-img {
@@ -257,6 +257,7 @@ nav.navigation-wrapper img {
   padding: 1em;
   border-radius: 7px;
   margin: 0 0 1em;
+  transition: all 0.3s;
 }
 
 .product-link .products-box.active, .product-link:hover .products-box {
