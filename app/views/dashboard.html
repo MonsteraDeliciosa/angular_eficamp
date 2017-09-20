@@ -74,55 +74,54 @@
 <main class="dashboard-wrapper">
   <section class="section">
     <div class="row">
-      <div class="small-12 columns">
-        <div class="row">
-          <div class="small-12 medium-8 columns">
-            <h1>Finance life stream</h1>
-            <div ng-controller="DashboardController">
-              <div class="row">
-                <div class="small-4 columns">
-                  <h2 class="lead">Balance</h2>
-                  <span class="text-condensed"><b>{{ balance | currency : '' : 2 }}</b> PLN</span>
-                </div>
-                <div class="small-4 columns">
-                  <h2 class="lead">Finance stream</h2>
-                  <span class="text-condensed"><b>{{ funds | currency : '' : 2 }}</b> PLN</span>
-                </div>
-                <div class="small-4 columns">
-                  <h2 class="lead">Scheduled payments</h2>
-                  <span class="text-condensed"><b>{{ payments | currency : '' : 2 }}</b> PLN<span>
+      <div class="large-expand columns">
+        <h1>Finance life stream</h1>
+        <div ng-controller="DashboardController">
+          <div class="row">
+            <div class="small-4 columns">
+              <h2 class="lead">Balance</h2>
+              <span class="text-condensed"><b>{{ balance | currency : '' : 2 }}</b> PLN</span>
+            </div>
+            <div class="small-4 columns">
+              <h2 class="lead">Finance stream</h2>
+              <span class="text-condensed"><b>{{ funds | currency : '' : 2 }}</b> PLN</span>
+            </div>
+            <div class="small-4 columns">
+              <h2 class="lead">Scheduled payments</h2>
+              <span class="text-condensed"><b>{{ payments | currency : '' : 2 }}</b> PLN<span>
                 </div>
               </div>
             </div>
           </div>
-          <div class="small-12 medium-4 columns">
+          <div class="shrink large-expand columns">
             <div class="row">
-              <div class="small-12 columns">
+              <div class="columns">
                 <div class="buttons-wrapper">
                   <span>Add</span>
-                  <button class="cta">Bank</button>
-                  <button class="cta">Payment</button>
-                </div>
-              </div>
-              <div class="small-12 columns">
-                <div class="buttons-wrapper inline">
-                  <span>Account analysis</span>
-                  <div class="buttons-container">
-                    <button class="cta">on</button>
-                    <button class="cta active">off</button>
-                  </div>
-                </div>
+              <button class="cta">Bank</button>
+              <button class="cta">Payment</button>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="columns">
+            <div class="buttons-wrapper inline">
+              <span>Account analysis</span>
+              <div class="buttons-container">
+                <button class="cta">on</button>
+                <button class="cta active">off</button>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+
   </section>
 
   <section class="finance-stream">
     <div class="row">
-      <div class="small-12 columns">
+      <div class="columns">
         <div class="stream-wrapper">
           lorem ipsum
         </div>
@@ -132,18 +131,107 @@
 
   <section class="products-history">
     <div class="row">
-      <div class="small-12 medium-3 columns">
+      <div class="columns">
         <h2 class="lead">Products</h2>
-        <div class="row">
-          <div class="small-6 columns">
-            myk
-          </div>
-          <div class="small-6 columns">
-            myk
-          </div>
-        </div>
+        <ul class="row small-up-2 no-bullets-list">
+          <li class="columns">
+            <a class="product-link" href="#">
+              <div class="products-box">
+                <div class="row">
+                  <div class="column small-4">
+                    <img class="nav-img block" src="img/wallets.png" alt="" />
+                  </div>
+                  <div class="column">
+                    <div class="row columns">
+                      Wallets [x]
+                    </div>
+                    <div class="row columns">
+                      666,00 PLN
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="columns">
+            <a class="product-link" href="#">
+              <div class="products-box">
+                <div class="row">
+                  <div class="column small-4">
+                    <img class="nav-img block" src="img/deposits.png" alt="" />
+                  </div>
+                  <div class="column">
+                    <div class="row columns">
+                      Deposits [x]
+                    </div>
+                    <div class="row columns">
+                      555,00 PLN
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="columns">
+            <a class="product-link" href="#">
+              <div class="products-box">
+                <div class="row">
+                  <div class="column small-4">
+                    <img class="nav-img block" src="img/accounts.png" alt="" />
+                  </div>
+                  <div class="column">
+                    <div class="row columns">
+                      Accounts [x]
+                    </div>
+                    <div class="row columns">
+                      666,00 PLN
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="columns">
+            <a class="product-link" href="#">
+              <div class="products-box">
+                <div class="row">
+                  <div class="column small-4">
+                    <img class="nav-img block" src="img/funds.png" alt="" />
+                  </div>
+                  <div class="column">
+                    <div class="row columns">
+                      Funds [x]
+                    </div>
+                    <div class="row columns">
+                      666,00 PLN
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="columns">
+            <a class="product-link" href="#">
+              <div class="products-box active">
+                <div class="row">
+                  <div class="column small-4">
+                    <img class="nav-img block" src="img/loans.png" alt="" />
+                  </div>
+                  <div class="column">
+                    <div class="row columns">
+                      Bank loans [x]
+                    </div>
+                    <div class="row columns">
+                      666,00 PLN
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
       </div>
-      <div class="small-12 medium-9 columns">
+      <div class="columns">
         <h2 class="lead">History</h2>
         <div class="list-component">
           <ul class="data-list">

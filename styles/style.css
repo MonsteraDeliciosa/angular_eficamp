@@ -1,8 +1,13 @@
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;
 }
+
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Roboto', sans-serif;  
+  font-family: 'Roboto', sans-serif;
+}
+
+.row {
+  max-width: 1200px;
 }
 
 
