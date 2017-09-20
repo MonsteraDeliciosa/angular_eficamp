@@ -12,7 +12,7 @@
     //     templateUrl: 'app/views/transfer.html'
     // })
       .when('/transfers', {
-      controller: 'TransfersController',
+      controller: 'DashboardController',
       templateUrl: 'app/views/dashboard.html'
     }).otherwise({redirectTo: '/'});
   });

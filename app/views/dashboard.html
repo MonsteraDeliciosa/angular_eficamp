@@ -1,4 +1,4 @@
-<nav class="navigation-wrapper">
+<nav class="navigation-wrapper text-normal">
   <div class="row align-justify align-middle">
     <div class="shrink columns large-order-1">
       <div class="row align-middle">
@@ -33,7 +33,7 @@
           </a>
         </div>
         <div class="shrink columns">
-          <a href="#">
+          <a href="#/">
             <img class="nav-img" src="img/login.png" alt="Logout" />
           </a>
         </div>
@@ -43,27 +43,27 @@
       <ul class="nav-list row pages-navigation">
         <li class="columns nav-box text-center active">
           <a class="nav-link" href="#" alt="home">
-                <img class="nav-img block" src="img/home.png" alt="" />
-                 <span class="block">home</span>
-              </a>
+            <img class="nav-img block" src="img/home.png" alt="" />
+             <span class="block">home</span>
+          </a>
         </li>
         <li class="columns nav-box text-center">
           <a class="nav-link" href="#" alt="analyse">
-                <img class="nav-img block" src="img/analyse.png" alt="" />
-                <span class="block">analyse</span>
-              </a>
+            <img class="nav-img block" src="img/analyse.png" alt="" />
+            <span class="block">analyse</span>
+          </a>
         </li>
         <li class="columns nav-box text-center">
           <a class="nav-link" href="#" alt="plan">
-                <img class="nav-img block" src="img/plan.png" alt="" />
-                <span class="block">plan</span>
-              </a>
+            <img class="nav-img block" src="img/plan.png" alt="" />
+            <span class="block">plan</span>
+          </a>
         </li>
         <li class="columns nav-box text-center">
           <a class="nav-link" href="#" alt="earn">
-                <img class="nav-img block" src="img/earn.png" alt="" />
-                <span class="block">earn</span>
-              </a>
+            <img class="nav-img block" src="img/earn.png" alt="" />
+            <span class="block">earn</span>
+          </a>
         </li>
       </ul>
     </div>
@@ -74,9 +74,9 @@
 <main class="dashboard-wrapper">
   <section class="section">
     <div class="row">
-      <div class="large-expand columns">
+      <div class="columns">
         <h1>Finance life stream</h1>
-        <div ng-controller="DashboardController">
+        <div>
           <div class="row">
             <div class="small-4 columns">
               <h2 class="lead">Balance</h2>
@@ -93,7 +93,7 @@
               </div>
             </div>
           </div>
-          <div class="shrink large-expand columns">
+          <div class="shrink columns">
             <div class="row">
               <div class="columns">
                 <div class="buttons-wrapper">
@@ -134,101 +134,27 @@
       <div class="columns">
         <h2 class="lead">Products</h2>
         <ul class="row small-up-2 no-bullets-list">
-          <li class="columns">
+
+          <li ng-repeat="product in products" class="columns">
             <a class="product-link" href="#">
               <div class="products-box">
                 <div class="row">
                   <div class="column small-4">
-                    <img class="nav-img block" src="img/wallets.png" alt="" />
+                    <img class="nav-img block" src="{{ product.img }}" alt="" />
                   </div>
                   <div class="column">
                     <div class="row columns">
-                      Wallets [x]
+                      {{ product.type }} [{{ product.elements }}]
                     </div>
                     <div class="row columns">
-                      666,00 PLN
+                      {{ product.amount | currency : '' : 2 }} {{ product.currency }}
                     </div>
                   </div>
                 </div>
               </div>
             </a>
           </li>
-          <li class="columns">
-            <a class="product-link" href="#">
-              <div class="products-box">
-                <div class="row">
-                  <div class="column small-4">
-                    <img class="nav-img block" src="img/deposits.png" alt="" />
-                  </div>
-                  <div class="column">
-                    <div class="row columns">
-                      Deposits [x]
-                    </div>
-                    <div class="row columns">
-                      555,00 PLN
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="columns">
-            <a class="product-link" href="#">
-              <div class="products-box">
-                <div class="row">
-                  <div class="column small-4">
-                    <img class="nav-img block" src="img/accounts.png" alt="" />
-                  </div>
-                  <div class="column">
-                    <div class="row columns">
-                      Accounts [x]
-                    </div>
-                    <div class="row columns">
-                      666,00 PLN
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="columns">
-            <a class="product-link" href="#">
-              <div class="products-box">
-                <div class="row">
-                  <div class="column small-4">
-                    <img class="nav-img block" src="img/funds.png" alt="" />
-                  </div>
-                  <div class="column">
-                    <div class="row columns">
-                      Funds [x]
-                    </div>
-                    <div class="row columns">
-                      666,00 PLN
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="columns">
-            <a class="product-link" href="#">
-              <div class="products-box active">
-                <div class="row">
-                  <div class="column small-4">
-                    <img class="nav-img block" src="img/loans.png" alt="" />
-                  </div>
-                  <div class="column">
-                    <div class="row columns">
-                      Bank loans [x]
-                    </div>
-                    <div class="row columns">
-                      666,00 PLN
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </li>
+
         </ul>
       </div>
       <div class="columns">
@@ -239,25 +165,25 @@
             <li ng-repeat="transfer in transfers">
               <div class="row align-middle">
                 <div class="small-3 columns">
-                  <span class="js-getData date">{{ transfer.date }}</span>
+                  <span class="date">{{ transfer.date }}</span>
                 </div>
                 <div class="small-6 columns">
-                  <span class="js-getData description">{{ transfer.description }}</span>
+                  <span class="description">{{ transfer.description }}</span>
                   <button class="button small no-margin float-right" ng-click="toggleDetails($event, transfer.id)">Details</button>
                 </div>
                 <div class="small-3 columns">
-                  <span class="js-getData status">{{ transfer.status }}</span>
-                  <span class="js-getData amount">{{ transfer.amount | currency : '' : 2 }}</span>
-                  <span class="js-getData hcurrency">{{ transfer.currency }}</span>
+                  <span class="status">{{ transfer.status }}</span>
+                  <span class="amount">{{ transfer.amount | currency : '' : 2 }}</span>
+                  <span class="hcurrency">{{ transfer.currency }}</span>
                 </div>
               </div>
               <div class="details-container" ng-show="transfer.id === activeId">
                 <div class="row align-middle">
                   <div class="columns small-3 text-left">
-                    <span class="js-getData category">ID: {{ transfer.id }} </span>
+                    <span class="category">ID: {{ transfer.id }} </span>
                   </div>
                   <div class="columns small-9 text-left">
-                    <span class="js-getData category">category: {{ transfer.category }} </span>
+                    <span class="category">category: {{ transfer.category }} </span>
                   </div>
                 </div>
               </div>
