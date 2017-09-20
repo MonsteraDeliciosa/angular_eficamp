@@ -9,42 +9,42 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 h1, .h1 {
   font-size: 32px;
   @media screen and (min-width: 40em) {
-    font-size: 48px;
+    font-size: 48px !important;
   }
 }
 
 h2, .h2 {
   font-size: 30px;
   @media screen and (min-width: 40em) {
-    font-size: 40px;
+    font-size: 40px !important;
   }
 }
 
 h3, .h3 {
   font-size: 26px;
   @media screen and (min-width: 40em) {
-    font-size: 36px;
+    font-size: 36px !important;
   }
 }
 
 h4, .h4 {
   font-size: 20px;
   @media screen and (min-width: 40em) {
-    font-size: 30px;
+    font-size: 30px !important;
   }
 }
 
 h5, .h5 {
   font-size: 14px;
   @media screen and (min-width: 40em) {
-    font-size: 24px;
+    font-size: 24px !important;
   }
 }
 
 h6, .h6 {
   font-size: 12px;
   @media screen and (min-width: 40em) {
-    font-size: 18px;
+    font-size: 18px !important;
   }
 }
 
@@ -268,4 +268,12 @@ input.success {
 .text-condensed {
   font-family: 'Roboto Condensed', sans-serif;
   line-height: 1;
+}
+
+.relative {
+  position: relative;
+}
+
+.inline {
+  display: inline;
 }

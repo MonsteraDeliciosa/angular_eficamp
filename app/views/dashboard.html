@@ -94,10 +94,12 @@
             </div>
           </div>
           <div class="shrink columns">
-            <div class="row">
+            <div class="row align-middle">
               <div class="columns">
+                <h3 class="h5">Add</h3>
+              </div>
+              <div class="columns shrink">
                 <div class="buttons-wrapper">
-                  <span>Add</span>
               <button class="cta">Bank</button>
               <button class="cta">Payment</button>
             </div>
@@ -105,9 +107,7 @@
         </div>
         <div class="row align-middle">
           <div class="columns">
-            <div class="buttons-wrapper inline">
-              <h3 class="h5">Account analysis</h3>
-            </div>
+            <h3 class="h5">Account analysis</h3>
           </div>
           <div class="columns shrink">
             <div class="buttons-container">
@@ -146,54 +146,54 @@
                   </div>
                   <div class="column">
                     <div class="row columns">
-                      {{ product.type }} [{{ product.elements }}]
-                    </div>
-                    <div class="row columns">
-                      {{ product.amount | currency : '' : 2 }} {{ product.currency }}
-                    </div>
-                  </div>
+                      <p class="relative inline">{{ product.type }} <span ng-show="product.elements > 0" class="notification-counter">{{ product.elements }}</span></p>
+            </div>
+            <div class="row columns">
+              {{ product.amount | currency : '' : 2 }} {{ product.currency }}
+            </div>
+          </div>
+        </div>
+      </div>
+      </a>
+      </li>
+
+      </ul>
+    </div>
+    <div class="columns">
+      <h2 class="lead">History</h2>
+      <div class="list-component">
+        <ul class="data-list">
+
+          <li ng-repeat="transfer in transfers">
+            <div class="row align-top">
+              <div class="shrink columns">
+                <span class="date">{{ transfer.date }}</span>
+              </div>
+              <div class="columns">
+                <span class="description">{{ transfer.description }}</span>
+                <button class="button small no-margin float-right" ng-click="toggleDetails($event, transfer.id)">Details</button>
+              </div>
+              <div class="small-3 columns">
+                <span class="status" ng-show="transfer.status === 'outcome'">-</span>
+                <span class="amount {{transfer.status}}">{{ transfer.amount | currency : '' : 2 }}</span>
+                <span class="hcurrency">{{ transfer.currency }}</span>
+              </div>
+            </div>
+            <div class="details-container" ng-show="transfer.id === activeId">
+              <div class="row align-middle">
+                <div class="columns shrink text-left">
+                  <span class="category">ID: {{ transfer.id }} </span>
+                </div>
+                <div class="columns text-center">
+                  <span class="category">category: {{ transfer.category }} </span>
                 </div>
               </div>
-            </a>
+            </div>
           </li>
 
         </ul>
       </div>
-      <div class="columns">
-        <h2 class="lead">History</h2>
-        <div class="list-component">
-          <ul class="data-list">
-
-            <li ng-repeat="transfer in transfers">
-              <div class="row align-middle">
-                <div class="small-3 columns">
-                  <span class="date">{{ transfer.date }}</span>
-                </div>
-                <div class="small-6 columns">
-                  <span class="description">{{ transfer.description }}</span>
-                  <button class="button small no-margin float-right" ng-click="toggleDetails($event, transfer.id)">Details</button>
-                </div>
-                <div class="small-3 columns">
-                  <span class="status">{{ transfer.status }}</span>
-                  <span class="amount">{{ transfer.amount | currency : '' : 2 }}</span>
-                  <span class="hcurrency">{{ transfer.currency }}</span>
-                </div>
-              </div>
-              <div class="details-container" ng-show="transfer.id === activeId">
-                <div class="row align-middle">
-                  <div class="columns small-3 text-left">
-                    <span class="category">ID: {{ transfer.id }} </span>
-                  </div>
-                  <div class="columns small-9 text-left">
-                    <span class="category">category: {{ transfer.category }} </span>
-                  </div>
-                </div>
-              </div>
-            </li>
-
-          </ul>
-        </div>
-      </div>
+    </div>
     </div>
   </section>
   <!-- </div> -->
